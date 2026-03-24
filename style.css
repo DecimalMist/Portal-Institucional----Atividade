@@ -7,34 +7,39 @@ body {
   }
   
     header {
-    background-color: rgb(255, 133, 2);
+    background-color: #B69680;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: middle;
     padding: 10px 20px;
   }
+    header a:hover {
+    background-color: rgb(210, 174, 145);
+    border-radius: 10px;
+    margin: 5px;
+  }
+
     picture {       
     display: flex;
     align-items: middle;
     justify-content: center;
     width: 100%;
-    background-color: transparent;
 }
   nav {
-    background-color: orange
-    (255, 133, 2);
+    background-color: #B69680;
     color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: middle;
     padding: 10px 20px;
+
   }
 
-  a :hover{
-    color: rgb(255, 207, 119);
+  nav a:hover {
+    background-color: rgb(210, 174, 145);
     border-radius: 10px;
-    margin: 0 5px;
+    margin: 5px;
   }
   
   ul {
@@ -61,6 +66,30 @@ body {
     color: rgb(135, 248, 251);
   }
   
+
+footer {
+  background-color: #B69680;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+}
+
+   .ifood {
+    
+    width: 30px;
+    height: auto;
+    margin-top: 8px;
+    align-items: middle;
+    padding: 10px 20px;
+  }
+
   .checkbtn {
     font-size: 30px;
     color: white;
