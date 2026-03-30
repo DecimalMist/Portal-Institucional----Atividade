@@ -5,14 +5,15 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
   }
-  
+  /* topo da pagina */
     header {
     background-color: #B69680;
     color: white;
     display: flex;
-    justify-content: space-between;
-    align-items: middle;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
+    width: 100%;
   }
     header a:hover {
     background-color: rgb(210, 174, 145);
@@ -22,10 +23,11 @@ body {
 
     picture {       
     display: flex;
-    align-items: middle;
+    align-items: center;
     justify-content: center;
-    width: 100%;
+    max-width: 100%;
 }
+
   nav {
     background-color: #B69680;
     color: white;
@@ -65,9 +67,72 @@ body {
   ul li a:hover {
     color: rgb(135, 248, 251);
   }
-  
+  /* pagina principal */
+  main {
+  margin: 0;
+  padding: 0;
+ }
 
-footer {
+  .content {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ }
+
+  menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+ .bem_vindo {
+  text-align: center;
+  margin: 0;         
+  background-color: #ae4550;  
+  padding: 20px;     
+}
+
+.bem_vindo h1 {
+  margin: 0;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.15); 
+  padding: 15px;
+  border-radius: 8px;
+}
+
+ .lojas {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  margin: 0;
+  background-color: rgb(255, 255, 88);
+  padding: 20px;
+  gap: 20px;
+}
+.lojas h2 {
+  margin: 0;
+  color: white;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.15); 
+  padding: 15px;
+  border-radius: 8px;
+}
+ .mapa {  
+   width: 200px;
+   flex-shrink: 0;
+}
+
+
+
+  /* fim da pagina */
+  footer {
   background-color: #B69680;
   color: white;
   text-align: center;
@@ -80,7 +145,6 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
    .ifood {
     
     width: 30px;
@@ -88,49 +152,4 @@ footer {
     margin-top: 8px;
     align-items: middle;
     padding: 10px 20px;
-  }
-
-  .checkbtn {
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-    display: none;
-  }
-  
-  #check {
-    display: none;
-  }
-  
-  @media (max-width: 768px) {
-    .checkbtn {
-      display: block;
-      order: 1;
-      margin-right: 20px;
-    }
-  
-    ul {
-      position: fixed;
-      top: 80px;
-      right: -100%;
-      background-color: rgb(255, 133, 2);
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.3s;
-    }
-  
-    ul li {
-      margin: 20px 0;
-    }
-  
-    ul li a {
-      font-size: 20px;
-    }
-  
-    #check:checked ~ ul {
-      right: 0;
-    }
   }
