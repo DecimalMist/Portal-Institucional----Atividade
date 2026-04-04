@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
   }
   /* topo da pagina */
     header {
@@ -14,6 +19,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     width: 100%;
+    box-sizing: border-box;
   }
     header a:hover {
     background-color: rgb(210, 174, 145);
@@ -71,6 +77,8 @@ body {
   main {
   margin: 0;
   padding: 0;
+  flex: 1;
+  width: 100%;
  }
 
   .content {
@@ -126,24 +134,59 @@ body {
 }
  .mapa {  
    width: 200px;
+   height: auto;
    flex-shrink: 0;
 }
+.produtos {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: center;
+  margin: 0;
+  background-color: rgb(174, 69, 80);
+  padding: 20px;
+  gap: 20px;
+}
 
+.fotoProdutos {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+  margin: 0 40px;
+}
 
+.produtos h2 {
+  margin: 0;
+  color: white;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.15); 
+  padding: 15px;
+  border-radius: 8px;
+}
+.contato{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+  margin: 0;
+  background-color: rgb(255, 255, 88);
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+}
 
   /* fim da pagina */
   footer {
-  background-color: #B69680;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
   display: flex;
   flex-direction: column; 
   justify-content: center;
   align-items: center;
+  background-color: #B69680;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  box-sizing: border-box;
 }
    .ifood {
     
@@ -153,3 +196,48 @@ body {
     align-items: middle;
     padding: 10px 20px;
   }
+
+  *, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+
+  .logoChiquinho {
+    max-width: 180px;
+  }
+
+  .bem_vindo h1 {
+    font-size: 0.95rem;
+  }
+
+  .lojas, .produtos {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lojas h2, .produtos h2 {
+    text-align: center;
+  }
+
+  .mapa {
+    width: 120px;
+  }
+
+  .fotoProdutos {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .contato {
+    padding: 20px 15px;
+  }
+}
